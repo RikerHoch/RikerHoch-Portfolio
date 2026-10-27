@@ -22,8 +22,7 @@
     <meta property="og:site_name" content="Riker Hoch" />
     <meta property="og:locale" content="en_NZ" />
     <meta property="og:image:alt" content="Riker Hoch — Web Developer & Programmer" />
-    <meta property="og:image" content="https://rikerhoch.com/SRC/Assets/Images/riker.webp"/>
-
+    <meta property="og:image" content="https://rikerhoch.com/SRC/Assets/Images/riker.webp" />
 
     <link rel="stylesheet" href="/SRC/CSS/Stylesheet.css" />
     <link rel="icon" href="/SRC/Assets/Images/riker.webp" type="image/x-icon" />
@@ -36,20 +35,41 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Riker Hoch",
-        "url": "https://rikerhoch.com/",
-        "jobTitle": "Web Developer",
-        "description": "Web developer and programmer building software and digital projects.",
-        "sameAs": [
-        "https://www.linkedin.com/in/rikerhoch/",
-        "https://github.com/RikerHoch",
-        "https://www.youtube.com/@XyberCore",
-        "https://codepen.io/Riker-Hoch",
-        "https://stackoverflow.com/users/33175550/riker-hoch"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://rikerhoch.com/#person",
+            "name": "Riker Hoch",
+            "url": "https://rikerhoch.com/",
+            "mainEntityOfPage": "https://rikerhoch.com/",
+            "jobTitle": ["Web Developer", "Programmer"],
+            "description": "Riker Hoch is a web developer and programmer based in New Zealand, building responsive websites, software and digital projects.",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://rikerhoch.com/SRC/Assets/Images/riker.webp"
+            },
+            "nationality": {
+              "@type": "Country",
+              "name": "New Zealand"
+            },
+            "sameAs": ["https://www.linkedin.com/in/rikerhoch/", "https://github.com/RikerHoch", "https://www.youtube.com/@XyberCore", "https://codepen.io/Riker-Hoch", "https://stackoverflow.com/users/33175550/riker-hoch", "https://huggingface.co/XyberCore", "https://discord.gg/brkbSE9QzY"],
+            "knowsAbout": ["Web Development", "HTML", "CSS", "JavaScript", "Responsive Web Design", "Software Development"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://rikerhoch.com/#website",
+            "url": "https://rikerhoch.com/",
+            "name": "Riker Hoch",
+            "description": "The personal portfolio of Riker Hoch, a web developer and programmer.",
+            "inLanguage": "en-NZ",
+            "publisher": {
+              "@id": "https://rikerhoch.com/#person"
+            }
+          }
         ]
       }
     </script>
+
     <script defer src="/SRC/JS/Script.js"></script>
   </head>
 
@@ -152,16 +172,6 @@
                 <p>Technologies, tools and things I'm learning.</p>
               </article>
               <article class="coming-card">
-                <span>🛠️</span>
-                <strong>In-app Terminal</strong>
-                <p>A terminal with ina site commands for functions and easter eggs</p>
-              </article>
-              <article class="coming-card">
-                <span>📝</span>
-                <strong>Schedule</strong>
-                <p>A schedule for visitors to see if or when i am avaliable</p>
-              </article>
-              <article class="coming-card">
                 <span>👤</span>
                 <strong>About Me</strong>
                 <p>A little more about the person behind the code.</p>
@@ -194,20 +204,40 @@
             </article>
           </div>
 
-          <div class="socials" aria-label="Social media">
-            <a class="social" href="https://www.linkedin.com/in/rikerhoch/" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on LinkedIn">
+          <div class="socials" aria-label="Professional profiles">
+            <a class="social linkedin" href="https://www.linkedin.com/in/rikerhoch/" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on LinkedIn">
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               <span>LinkedIn</span>
             </a>
 
-            <a class="social" href="https://github.com/RikerHoch" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on GitHub">
+            <a class="social github" href="https://github.com/RikerHoch" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on GitHub">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
               <span>GitHub</span>
             </a>
 
-            <a class="social" href="https://www.youtube.com/@XyberCore" target="_blank" aria-label="Riker Hoch on YouTube">
+            <a class="social youtube" href="https://www.youtube.com/@XyberCore" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on YouTube">
               <i class="fa-brands fa-youtube" aria-hidden="true"></i>
               <span>YouTube</span>
+            </a>
+
+            <a class="social codepen" href="https://codepen.io/Riker-Hoch" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on CodePen">
+              <i class="fa-brands fa-codepen" aria-hidden="true"></i>
+              <span>CodePen</span>
+            </a>
+
+            <a class="social stackoverflow" href="https://stackoverflow.com/users/33175550/riker-hoch" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on Stack Overflow">
+              <i class="fa-brands fa-stack-overflow" aria-hidden="true"></i>
+              <span>Stack Overflow</span>
+            </a>
+
+            <a class="social huggingface" href="https://huggingface.co/XyberCore" target="_blank" rel="me noopener noreferrer" aria-label="Riker Hoch on Hugging Face">
+              <i class="fa-solid fa-face-smile" aria-hidden="true"></i>
+              <span>Hugging Face</span>
+            </a>
+
+            <a class="social discord" href="https://discord.gg/brkbSE9QzY" target="_blank" rel="noopener noreferrer" aria-label="Join the Xyber Core Discord community">
+              <i class="fa-brands fa-discord" aria-hidden="true"></i>
+              <span>Discord</span>
             </a>
           </div>
 
@@ -219,18 +249,14 @@
         </section>
       </main>
 
-      <div class="system-meta" aria-label="Website status">
-
-      </div>
+      <div class="system-meta" aria-label="Website status"></div>
 
       <footer>
-        © <span id="year"></span> Riker Hoch &nbsp;·&nbsp; Built with 🌐 + code &nbsp;·&nbsp;
+        © <span id="year"></span> Riker Hoch &nbsp;·&nbsp;
         <span class="sparkle">✦</span>
         <br />
         <span class="tagline">“Build. Learn. Experiment. Repeat.”</span>
       </footer>
     </div>
-
-    <script></script>
   </body>
 </html>
